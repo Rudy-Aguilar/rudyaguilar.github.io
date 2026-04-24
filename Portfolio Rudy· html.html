@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rudy Rafael Aguilar Sanchez | Portafolio Profesional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#0b1120;color:#fff;line-height:1.6}
+header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(135deg,#0b1120,#111827)}
+header h1{font-size:3rem;color:#38bdf8}
+header p{max-width:700px;margin:15px auto;color:#cbd5e1}
+.btn{display:inline-block;margin:10px;padding:12px 24px;border-radius:30px;background:#38bdf8;color:#000;text-decoration:none;font-weight:600;transition:.3s}
+.btn:hover{transform:scale(1.05);box-shadow:0 0 15px #38bdf8}
+section{padding:60px 10%}
+h2{text-align:center;font-size:2rem;margin-bottom:30px;color:#38bdf8}
+.card{background:#111827;border:1px solid #1f2937;border-radius:15px;padding:20px;margin:15px 0;box-shadow:0 0 10px rgba(56,189,248,.1)}
+.skills .skill{margin:15px 0}
+.bar{background:#1f2937;border-radius:10px;overflow:hidden}
+.fill{height:10px;background:#38bdf8}
+.timeline{border-left:3px solid #38bdf8;padding-left:20px}
+footer{text-align:center;padding:20px;background:#111827;color:#94a3b8}
+.social a{margin:0 10px;color:#38bdf8;text-decoration:none}
+.fade{opacity:0;transform:translateY(20px);transition:1s}
+.fade.show{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<header>
+<h1>Rudy Rafael Aguilar Sanchez</h1>
+<h3>Técnico Diseñador | Técnico en Computación IT</h3>
+<p>Profesional multifuncional en Tecnología, Ventas y Diseño con experiencia en soporte TI, liderazgo, atención al cliente y ventas.</p>
+<a class="btn" href="CV_Actualizado_Rudy.Aguilar.pdf" download>Descargar CV</a>
+<a class="btn" href="https://www.linkedin.com/in/rudy-aguilar-818660112" target="_blank">LinkedIn</a>
+</header>
+<section class="fade">
+<h2>Sobre Mí</h2>
+<div class="card">Soy un profesional versátil con experiencia en soporte técnico, diseño gráfico, ventas, supervisión de personal y servicio al cliente. Me adapto rápidamente a nuevos retos y me enfoco en resultados.</div>
+</section>
+<section class="skills fade">
+<h2>Habilidades</h2>
+<div class="skill">Soporte TI<div class="bar"><div class="fill" style="width:95%"></div></div></div>
+<div class="skill">Diseño Gráfico<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+<div class="skill">Ventas<div class="bar"><div class="fill" style="width:90%"></div></div></div>
+<div class="skill">Inglés<div class="bar"><div class="fill" style="width:75%"></div></div></div>
+</section>
+<section class="fade">
+<h2>Experiencia</h2>
+<div class="timeline">
+<div class="card"><strong>Posicionarte (2025 - 2026)</strong><br>Encargado de Tienda / Técnico Vendedor.</div>
+<div class="card"><strong>Parqueo La Aurora (2024 - 2025)</strong><br>Encargado de Parqueo.</div>
+<div class="card"><strong>Computecs (2022 - 2024)</strong><br>Técnico de Servicio TI Bilingüe.</div>
+<div class="card"><strong>Allied Global</strong><br>Técnico de Servicio CLARO.</div>
+<div class="card"><strong>Textos Escolares</strong><br>Diseñador / Apoyo TI.</div>
+</div>
+</section>
+<section class="fade">
+<h2>Contacto</h2>
+<div class="card" style="text-align:center;">
+<p>📧 rudy.aguilar.dg.it@hotmail.com</p>
+<p>📱 +502 48087562</p>
+<a class="btn" href="https://wa.me/50248087562" target="_blank">WhatsApp</a>
+</div>
+</section>
+<footer>
+<div class="social">
+<a href="https://www.linkedin.com/in/rudy-aguilar-818660112" target="_blank">LinkedIn</a>
+<a href="mailto:rudy.aguilar.dg.it@hotmail.com">Correo</a>
+</div>
+<p>© 2026 Rudy Aguilar</p>
+</footer>
+<script>
+const faders=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{if(entry.isIntersecting) entry.target.classList.add('show');});
+});
+faders.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
