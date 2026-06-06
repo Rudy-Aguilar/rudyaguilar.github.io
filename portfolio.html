@@ -1,139 +1,352 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Rudy Aguilar</title>
 
-    <link rel="stylesheet" href="assets/css/portfolio.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Portafolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+
+background:
+
+linear-gradient(
+135deg,
+#0f172a,
+#1e293b
+);
+
+color:white;
+
+padding:50px;
+
+overflow-x:hidden;
+
+}
+
+.titulo{
+
+text-align:center;
+
+font-size:48px;
+
+font-weight:700;
+
+margin-bottom:50px;
+
+}
+
+.wrapper{
+
+position:relative;
+
+}
+
+.galeria{
+
+display:flex;
+
+gap:30px;
+
+overflow-x:auto;
+
+scroll-behavior:smooth;
+
+padding:20px;
+
+scrollbar-width:none;
+
+}
+
+.galeria::-webkit-scrollbar{
+
+display:none;
+
+}
+
+.card{
+
+min-width:380px;
+
+background:
+
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+border-radius:25px;
+
+overflow:hidden;
+
+transition:.4s;
+
+box-shadow:
+
+0 10px 40px rgba(0,0,0,.3);
+
+}
+
+.card:hover{
+
+transform:
+
+translateY(-10px)
+scale(1.02);
+
+}
+
+.card img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+}
+
+.info{
+
+padding:25px;
+
+}
+
+.info h2{
+
+margin-bottom:10px;
+
+}
+
+.info p{
+
+opacity:.8;
+
+line-height:1.5;
+
+}
+
+.btn{
+
+margin-top:20px;
+
+display:inline-block;
+
+padding:12px 20px;
+
+border-radius:50px;
+
+background:white;
+
+color:black;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+.flecha{
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:
+
+rgba(255,255,255,.15);
+
+color:white;
+
+font-size:30px;
+
+cursor:pointer;
+
+backdrop-filter:blur(20px);
+
+z-index:5;
+
+}
+
+.left{
+
+left:-20px;
+
+}
+
+.right{
+
+right:-20px;
+
+}
+
+@media(max-width:768px){
+
+.card{
+
+min-width:280px;
+
+}
+
+.titulo{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">Rudy Aguilar</div>
+<h1 class="titulo">
 
-        <ul>
-            <li><a href="index.html">CV</a></li>
-            <li><a href="#portfolio">Proyectos</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+MIS TRABAJOS
 
-<section class="hero">
+</h1>
 
-    <div class="hero-content">
+<div class="wrapper">
 
-        <h1>Diseño que transforma ideas en marcas memorables</h1>
+<button class="flecha left">
 
-        <p>
-            Branding, Diseño Web, Redes Sociales e Identidad Visual
-            para empresas y emprendedores.
-        </p>
+❮
 
-        <a href="#portfolio" class="btn-primary">
-            Ver Portafolio
-        </a>
+</button>
 
-    </div>
+<div class="galeria" id="galeria">
 
-</section>
+<div class="card">
 
-<section id="services" class="services">
+<img src="img1.jpg">
 
-    <h2>Servicios</h2>
+<div class="info">
 
-    <div class="service-grid">
+<h2>Reparación Laptop Dell</h2>
 
-        <div class="card">
-            <h3>Branding</h3>
-            <p>Identidad visual y diseño de logotipos.</p>
-        </div>
+<p>
 
-        <div class="card">
-            <h3>Redes Sociales</h3>
-            <p>Contenido visual para Instagram y Facebook.</p>
-        </div>
+Cambio de SSD, limpieza interna y mejora de rendimiento.
 
-        <div class="card">
-            <h3>Diseño Web</h3>
-            <p>Interfaces modernas y experiencias digitales.</p>
-        </div>
+</p>
 
-        <div class="card">
-            <h3>Diseño Impreso</h3>
-            <p>Flyers, catálogos y material publicitario.</p>
-        </div>
+<a class="btn">
 
-    </div>
+Ver Proyecto
 
-</section>
+</a>
 
-<section id="portfolio" class="portfolio">
+</div>
 
-    <h2>Trabajos Destacados</h2>
+</div>
 
-    <div class="portfolio-grid">
+<div class="card">
 
-        <article class="portfolio-item">
-            <img src="assets/img/portfolio/branding/proyecto1.jpg" alt="">
-            <div class="overlay">
-                <h3>Branding Cafetería</h3>
-                <a href="projects/branding-cafeteria.html">
-                    Ver Proyecto
-                </a>
-            </div>
-        </article>
+<img src="img2.jpg">
 
-        <article class="portfolio-item">
-            <img src="assets/img/portfolio/social-media/proyecto2.jpg" alt="">
-            <div class="overlay">
-                <h3>Campaña Redes Sociales</h3>
-                <a href="projects/social-campaign.html">
-                    Ver Proyecto
-                </a>
-            </div>
-        </article>
+<div class="info">
 
-        <article class="portfolio-item">
-            <img src="assets/img/portfolio/web-design/proyecto3.jpg" alt="">
-            <div class="overlay">
-                <h3>Landing Page</h3>
-                <a href="projects/landing-page.html">
-                    Ver Proyecto
-                </a>
-            </div>
-        </article>
+<h2>Upgrade Memoria RAM</h2>
 
-    </div>
+<p>
 
-</section>
+Expansión y optimización de equipo empresarial.
 
-<section class="cta">
+</p>
 
-    <h2>¿Necesitas una identidad visual profesional?</h2>
+<a class="btn">
 
-    <p>
-        Estoy disponible para proyectos freelance.
-    </p>
+Ver Proyecto
 
-    <a href="mailto:tu-correo@ejemplo.com" class="btn-primary">
-        Solicitar Cotización
-    </a>
+</a>
 
-</section>
+</div>
 
-<footer id="contact">
+</div>
 
-    <h3>Contacto</h3>
+<div class="card">
 
-    <p>correo@ejemplo.com</p>
+<img src="img3.jpg">
 
-</footer>
+<div class="info">
+
+<h2>Mantenimiento Completo</h2>
+
+<p>
+
+Servicio preventivo y correctivo.
+
+</p>
+
+<a class="btn">
+
+Ver Proyecto
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<button class="flecha right">
+
+❯
+
+</button>
+
+</div>
+
+<script>
+
+const galeria=
+
+document.getElementById("galeria");
+
+document
+.querySelector(".right")
+.onclick=()=>{
+
+galeria.scrollLeft+=450;
+
+}
+
+document
+.querySelector(".left")
+.onclick=()=>{
+
+galeria.scrollLeft-=450;
+
+}
+
+</script>
 
 </body>
+
 </html>
