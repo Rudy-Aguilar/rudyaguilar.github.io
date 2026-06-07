@@ -290,14 +290,13 @@ Ver Proyecto
 </div>
 
 <div class="card">
-    <video class="video-card" controls muted loop>
-        <source src="images/VideoSmart.mp4" type="video/mp4">
-        Tu navegador no soporta videos.
+    <video class="video-card" muted loop>
+        <source src="videos/mantenimiento-completo.mp4" type="video/mp4">
     </video>
     
     <div class="info">
-        <h2>Videos en redes sociales</h2>
-        <p>reels de 15-30 segundos.</p>
+        <h2>Mantenimiento Completo</h2>
+        <p>Servicio preventivo y correctivo.</p>
         <a class="btn">Ver Proyecto</a>
     </div>
 </div>
@@ -511,6 +510,12 @@ init();
 init();
 
 animate();
+
+    // Elemento para el video
+document.querySelectorAll('.video-card').forEach(video => {
+    video.addEventListener('mouseover', () => video.play());
+    video.addEventListener('mouseout', () => video.pause());
+});
 
 </script>
 
